@@ -1,0 +1,177 @@
+If you want to move down the line, please use \n. e.g: tina\nshahadat.
+
+After changed, you have to restart the bot to use.
+
+Put the # character at the beginning of each sentence if you don't want the code to run those lines.
+
+Thanks to https://www.facebook.com/duong.than.net for translate to English!
+
+SAHU.js
+
+shahadat.newVersionDetected=𝐘𝐨𝐮 𝐚𝐫𝐞 𝐮𝐬𝐢𝐧𝐠 𝐯𝐞𝐫𝐬𝐢𝐨𝐧 %1, 𝐭𝐡𝐞 𝐥𝐚𝐭𝐞𝐬𝐭 𝐯𝐞𝐫𝐬𝐢𝐨𝐧 𝐢𝐬 %2.
+
+shahadat.errorFormat=Malformed module!
+
+shahadat.nameExist=Module's name is similar to another module!
+
+shahadat.notFoundLanguage=Module %1 don't support your language
+
+shahadat.notFoundPackage=Can't find package %1 support for module %2, installing...
+
+shahadat.cantInstallPackage=Can't install package %1 for module %2, error: %3
+
+shahadat.loadedPackage=Installed whole package successfully for module %1
+
+shahadat.loadedConfig=Installed config successfully for module %1
+
+shahadat.cantLoadConfig=Can't install config of module %1, error: %2
+
+shahadat.cantOnload=Can't launch setup of module %1, error: %1
+
+shahadat.successLoadModule=Successfully installed module %1
+
+shahadat.failLoadModule=Can't install module %1, error: %2
+
+shahadat.finishLoadModule=Installed %1 module commands and %2 module events successfully
+
+shahadat.foundPathAppstate=shahadatstate successfully
+
+shahadat.notFoundPathAppstate=Error can't find appstate file maybe file is malformed!
+
+shahadat.checkListGban=Checking global ban list...
+
+shahadat.banDevice=Your device have been banned from shahadat islam, please contact to facebook https://fb.me/100001039692046 to know more information or asking for unban key, if you already have unban key, please fill it below.
+
+shahadat.keyNotSameFormat=Wrong format, code must contain 6 number.
+
+shahadat.codeInputExpired=Your code is wrong or out of date.
+
+shahadat.unbanDeviceSuccess=Your device are unban now, please restart to use.
+
+shahadat.userBanned=You had been banned from shahadat islam when %1 with reason: %2. Please contact to facebook https://fb.me/100001039692046to have more information!
+
+shahadat.finishCheckListGban=Checked global ban list
+
+shahadat.handleListenError=handleListene has occurred some unexpected errorr, error : %1
+
+shahadat.warningSourceCode=DETECTED THAT SOURCE CODE'S STRUCTURE HAD BEEN CHANGED , STOP NOW!
+
+shahadat.refreshListen=Refreshed handleListener...
+
+shahadat.successConnectDatabase=Connected to database successfully!
+
+shahadat.failConnectDatabase=Failed to connect to database, error: %1
+
+includes/listen.js
+
+listen.startLoadEnvironment=Proceed to load the environment variable ...
+
+listen.loadedEnvironmentThread=Loaded thread environment variable successfully
+
+listen.loadedEnvironmentUser=Loaded user environment variable successfully
+
+listen.successLoadEnvironment=Loaded environment variable successfully
+
+listen.failLoadEnvironment=Can't load environment variable, error: %1
+
+includes/controller/currencies.js
+
+currencies.needObjectOrArray=Have to be an Array or an Object or maybe both
+
+currencies.needObject=Have to be an Object
+
+currencies.needNumber= Have to be an number
+
+includes/controller/threads.js
+
+threads.needObjectOrArray=Have to be an Array or an Object or maybe both
+
+threads.needObject=Have to be an Object
+
+includes/controller/users.js
+
+users.needObjectOrArray=Have to be an Array or an Object or maybe both
+
+users.needObject=Have to be an Object
+
+includes/handle/handleCommand.js
+
+handleCommand.userBanned=আপনাকে ব্যান করে দেওয়া হয়েছে ⛔\n অনব্যান করতে এডমিন এর সাথে যোগাযোগ করুন https://m.me/100001039692046
+
+handleCommand.threadBanned= আপনার এই গ্ৰুপটি ব্যান করে দাওয়া হয়েছে ⛔\n আবার চালু করতে এডমিনকে এ্যাড বা মেসেজ দেন https://m.me/100001039692046
+
+handleCommand.commandNotExist=🌸 আসসালামু আলাইকুম ওয়া রহমাতুল্লাহ 🌸\nআপনার প্রদত্ত কমান্ডটি সঠিক নয় ❌\n\nআপনি কি বোঝাতে চেয়েছিলেন ➤ %1 ❓n\\nঅনুগ্রহ করে সঠিক কমান্ড ব্যবহার করুন ধন্যবাদ 🌺
+
+handleCommand.commandThreadBanned=Your thread is unable to use command "%1"
+
+handleCommand.commandUserBanned=You are unable to use command "%1"
+
+handleCommand.threadNotAllowNSFW=❌ | Only bot's admin can use the command "%1"
+
+handleCommand.cantGetInfoThread=Can't get your thread's info, error: %1
+
+handleCommand.permssionNotEnough="%1"🌸 আসসালামু আলাইকুম ওয়া রহমাতুল্লাহ 🌸\n\n🚫 এই কমান্ডটি শুধুমাত্র এডমিন ব্যবহার করতে পারবে\n আপনার কাছে এটি ব্যাবহারের অনুমতি নেই 🌺
+
+handleCommand.cantSetMessageReaction=Having some unexpected error at setMessageReaction, error: %1
+
+handleCommand.executeCommand=[ %1 ] Command used: %2 by user: %3 at thread: %4 | Args included: %5 | Processing time: %6ms
+
+handleCommand.commandError=Having some unexpected error when using command %1, error: %2
+
+includes/handle/handleCommandEvent.js
+
+handleCommandEvent.moduleError=Having some unexpected error when using command %1, error: %2
+
+includes/handle/handleCreateDatabase.js
+
+handleCreateDatabase.newThread=new thread: %1
+
+handleCreateDatabase.newUser=new user %1
+
+includes/handle/handleEvent.js
+
+handleEvent.executeEvent=[ %1 ] Event was executed: %2 at thread: %3 | Processing time: %4ms
+
+handleEvent.eventError=Having some error when executing event %1, error: %12
+
+includes/handle/handleReaction.js
+
+handleReaction.missingValue=Missing value to respond your problem
+
+handleReaction.executeError=Having some error when responding to your problem, error: %1
+
+includes/handle/handleReply.js
+
+handleReply.missingValue=Missing value to respond your problem
+
+handleReply.executeError=Having some error when responding your problem, error: %1
+
+includes/handle/handleSchedule.js
+
+handleSchedule.exectuteError=Having some error when schedule at module %1, error: %2
+
+utils/index.js
+
+utils.throwError=ℹ️ [!] ɪғ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ɴᴏᴛ ᴡᴏʀᴋɪɴɢ, ᴘʟᴇᴀsᴇ ᴜsᴇ ᴀɴᴏᴛʜᴇʀ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ. %1help %2 ᴜsᴇ ғᴏʀ ᴍᴏʀᴇ ᴜsᴀɢᴇ💙🥺
+
+updater.js
+
+updater.latestVersion=You are using the latest version
+
+updater.cantFindVersion=You are using an undefined version (%1), please check your package.json file again
+
+updater.newVersions=There are %1 new versions to update, starting to update...
+
+updater.updateSuccess=Update successfully%1
+
+updater.configChanged=The %1 has been changed, please check your config.json file again
+
+updater.installingPackages=Installing dependencies for bot...
+
+updater.installSuccess=Installed dependencies successfully, restart the bot to use the new version
+
+updater.backupSuccess=Successfully backed up changed files, see in the %1 folder
+
+updater.restartToApply=. Restart the bot to apply the new version
+
+updater.skipFile=There is a new version of the %1 file, but you have skipped this file during the update process with the comment %2 in this file
