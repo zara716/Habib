@@ -96,4 +96,4 @@ ___
    
 💖 **Thank You For Choosing 𝐒𝐡𝐚𝐡𝐚𝐝𝐚𝐭 𝐈𝐬𝐥𝐚𝐦𝐢𝐜 𝐁𝐨𝐭!**  
 🗓️ *Release Date:* `17/08/2025 at 3:00`  
-⭐ **Please don't forget to give a star after forking! It really helps!**# SHAHADAT-ISLAMIC-CHAT-BOT
+⭐ **Please don't forget to give a star after forking! It really helps!**
