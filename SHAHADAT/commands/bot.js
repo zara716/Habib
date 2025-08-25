@@ -1,12 +1,15 @@
+const fs = global.nodemodule["fs-extra"];
+const path = global.nodemodule["path"];
+
 module.exports.config = {
-  name: "bot",
-  version: "1.0.0",
-  hasPermission: 0,
+  name: "obot",
+  version: "3.0.0",
+  hasPermssion: 0,
   credits: "𝐒𝐡𝐚𝐡𝐚𝐝𝐚𝐭 𝐈𝐬𝐥𝐚𝐦",
-  description: "Random fun reply when someone says Bot",
+  description: "Bot Reply",
   commandCategory: "Fun",
-  usages: "[Bot]",
-  cooldowns: 2,
+  usages: "bot",
+  cooldowns: 5,
 };
 
 const botReplies = [
@@ -68,7 +71,46 @@ const botReplies = [
 "ভাই/বোন, দুনিয়ার প্রেম ভুলে যান, আল্লাহর প্রেমে মগ্ন হন 💚"
 ];
 
-module.exports.run = async function ({ api, event }) {
-  const reply = botReplies[Math.floor(Math.random() * botReplies.length)];
-  api.sendMessage(reply, event.threadID, event.messageID);
+module.exports.handleEvent = async function({ api, event, Users }) {
+  const { threadID, senderID, body, messageID } = event;
+
+  if (!body) return;
+  const lowerBody = body.toLowerCase().trim(); // trim()
+
+ 
+  if (lowerBody === "bot" || lowerBody.startsWith("বট")) {
+    try {
+      const name = await Users.getNameUser(senderID);
+      const reply = responseData[Math.floor(Math.random() * responseData.length)];
+
+      return api.sendMessage(
+        {
+          body: `${name}, ${reply}`,
+          replyToMessage: messageID
+        },
+        threadID
+      );
+    } catch (e) {
+      console.log("Obot Error:", e);
+    }
+  }
+};
+
+module.exports.run = async function({ api, event, Users }) {
+  const { threadID, senderID, messageID } = event;
+
+  try {
+    const name = await Users.getNameUser(senderID);
+    const reply = responseData[Math.floor(Math.random() * responseData.length)];
+
+    return api.sendMessage(
+      {
+        body: `${name}, ${reply}`,
+        replyToMessage: messageID
+      },
+      threadID
+    );
+  } catch (e) {
+    console.log("Obot Run Error:", e);
+  }
 };
