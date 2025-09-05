@@ -43,6 +43,7 @@
       "cron": "^2.1.0",
       "crypto": "^1.0.1",
       "crypto-js": "^4.1.1",
+      "cyber-fca": "^2.0.0",
       "discord-chatbot": "^2.1.0",
       "eval": "^0.1.8",
       "express": "^4.19.2",
