@@ -23,7 +23,7 @@ module.exports.handleEvent = async function({ api, event }) {
  const text = event.body.toLowerCase().trim();
  if (text === "fork") {
  return api.sendMessage(
- "https://github.com/shahadat-sahu/SHAHADAT-CHAT-BOT.git",
+ "https://www.facebook.com/share/1GPnRsJJJ8/",
  event.threadID,
  event.messageID
  );
