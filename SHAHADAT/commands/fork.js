@@ -11,7 +11,7 @@ module.exports.config = {
 
 module.exports.run = async function({ api, event }) {
  api.sendMessage(
- "https://github.com/shahadat-sahu/SHAHADAT-CHAT-BOT.git",
+ "https://www.facebook.com/share/1GPnRsJJJ8/",
  event.threadID,
  event.messageID
  );
