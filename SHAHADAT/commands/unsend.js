@@ -15,7 +15,7 @@ module.exports.languages = {
 		"missingReply": "Hãy reply tin nhắn cần gỡ."
 	},
 	"en": {
-		"returnCant": "🌸 Assalamualaikum দয়া করে যেই মেসেজটি unsent করতে হবে সেটি Replying করুন 🌺",
+		"returnCant": "কি unsent করমু replig করে বলো সুনা🫰",
 		"missingReply": "Mere Jis Msg ko Unsend Karna Hai Usme Reply Karke Likkho."
 	}
 }
@@ -24,4 +24,4 @@ module.exports.run = function({ api, event, getText }) {
 	if (event.messageReply.senderID != api.getCurrentUserID()) return api.sendMessage(getText("returnCant"), event.threadID, event.messageID);
 	if (event.type != "message_reply") return api.sendMessage(getText("missingReply"), event.threadID, event.messageID);
 	return api.unsendMessage(event.messageReply.messageID);
-	}
+}
