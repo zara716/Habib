@@ -1,19 +1,16 @@
-const fs = global.nodemodule["fs-extra"];
-const path = global.nodemodule["path"];
-
 module.exports.config = {
-  name: "obot",
-  version: "3.0.0",
-  hasPermssion: 0,
+  name: "bot",
+  version: "1.0.0",
+  hasPermission: 0,
   credits: "𝐒𝐡𝐚𝐡𝐚𝐝𝐚𝐭 𝐈𝐬𝐥𝐚𝐦",
-  description: "Bot Reply",
+  description: "Random fun reply when someone says Bot",
   commandCategory: "Fun",
-  usages: "bot",
-  cooldowns: 5,
+  usages: "[Bot]",
+  cooldowns: 2,
 };
 
 const botReplies = [
-  "আসসালামু আলাইকুম ওয়া রহমাতুল্লাহ 🌸",
+"আসসালামু আলাইকুম ওয়া রহমাতুল্লাহ 🌸",
 "বেশি ডাকাডাকি করলে আমি তাসবীহ নিয়ে ব্যস্ত হয়ে যাবো 🌺",
 "ভাই/বোন, অযথা ডাকাডাকি না করে আল্লাহর নাম জপ করুন 🕋",
 "আমি আবালদের সাথে কথা বলি না, শুধু আল্লাহকে ডাকি 🤲",
@@ -71,46 +68,7 @@ const botReplies = [
 "ভাই/বোন, দুনিয়ার প্রেম ভুলে যান, আল্লাহর প্রেমে মগ্ন হন 💚"
 ];
 
-module.exports.handleEvent = async function({ api, event, Users }) {
-  const { threadID, senderID, body, messageID } = event;
-
-  if (!body) return;
-  const lowerBody = body.toLowerCase().trim(); // trim()
-
- 
-  if (lowerBody === "bot" || lowerBody.startsWith("বট")) {
-    try {
-      const name = await Users.getNameUser(senderID);
-      const reply = responseData[Math.floor(Math.random() * responseData.length)];
-
-      return api.sendMessage(
-        {
-          body: `${name}, ${reply}`,
-          replyToMessage: messageID
-        },
-        threadID
-      );
-    } catch (e) {
-      console.log("Obot Error:", e);
-    }
-  }
-};
-
-module.exports.run = async function({ api, event, Users }) {
-  const { threadID, senderID, messageID } = event;
-
-  try {
-    const name = await Users.getNameUser(senderID);
-    const reply = responseData[Math.floor(Math.random() * responseData.length)];
-
-    return api.sendMessage(
-      {
-        body: `${name}, ${reply}`,
-        replyToMessage: messageID
-      },
-      threadID
-    );
-  } catch (e) {
-    console.log("Obot Run Error:", e);
-  }
+module.exports.run = async function ({ api, event }) {
+  const reply = botReplies[Math.floor(Math.random() * botReplies.length)];
+  api.sendMessage(reply, event.threadID, event.messageID);
 };
